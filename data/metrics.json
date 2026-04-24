@@ -1,0 +1,13 @@
+{
+  "payment-service": {
+    "cpu_percent": 82,
+    "error_rate_percent": 12.4,
+    "db_connections_active": 97,
+    "db_connections_max": 100
+  },
+  "auth-service": {
+    "cpu_percent": 44,
+    "error_rate_percent": 2.1,
+    "dependency_latency_ms": 850
+  }
+}

@@ -1,0 +1,27 @@
+Title: Database connection pool exhaustion
+
+Symptoms:
+- DB connection pool timeout
+- Database connections near max
+- Retry attempts increasing
+- Failed to persist transaction
+- High p95 latency
+- Elevated error rate
+
+Likely causes:
+- Connection pool too small
+- Slow queries
+- Connection leak
+- Sudden traffic spike
+
+Checks:
+- Active DB connections vs max
+- Slow query logs
+- Connection lifecycle in application
+- Retry amplification
+
+Recommended actions:
+- Increase pool size temporarily
+- Inspect and optimize slow queries
+- Check for leaked/unclosed connections
+- Reduce retry storm if present

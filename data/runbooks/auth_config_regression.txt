@@ -1,0 +1,27 @@
+Title: Auth service config regression after deployment
+
+Symptoms:
+- Login failures after release
+- Token validation timeout
+- Config parse exceptions
+- Increased 401 responses
+- Recent config reload
+- Recent deployment close to incident start
+
+Likely causes:
+- Bad config rollout
+- Missing issuer / auth setting
+- Secret or env mismatch
+- Partial config migration issue
+
+Checks:
+- Recent deployment diff
+- Config validation errors
+- Token issuer / audience settings
+- Secret values and environment variables
+
+Recommended actions:
+- Roll back recent release if issue started immediately after deploy
+- Fix config schema mismatch
+- Re-run config validation
+- Verify secrets and issuer configuration

@@ -1,0 +1,26 @@
+Title: External provider rate limiting causing notification delays
+
+Symptoms:
+- Notification delays
+- Dropped sends
+- Rate limit exceeded from provider
+- Retry backoff triggered
+- Queue depth increasing
+- SMS provider healthy but email path degraded
+
+Likely causes:
+- Email provider throttling
+- Burst traffic exceeding provider quota
+- Retry policy compounding queue growth
+
+Checks:
+- Provider 429 rate
+- Queue depth
+- Retry schedule and backoff policy
+- Per-channel health split
+
+Recommended actions:
+- Slow outgoing rate
+- Increase backoff interval
+- Prioritize critical notifications
+- Shift traffic to alternate provider if available

@@ -1,0 +1,16 @@
+{
+  "id": "incident_003_gateway_upstream_auth",
+  "service": "api-gateway",
+  "symptom": "502 spike from upstream",
+  "evidence": [
+    "Upstream auth-service returned 503",
+    "Request timeout waiting for auth-service",
+    "Circuit breaker opened"
+  ],
+  "root_cause": "Gateway errors caused by degraded upstream auth-service",
+  "resolution": [
+    "Stabilized auth-service",
+    "Reduced retry amplification",
+    "Adjusted timeout and breaker thresholds"
+  ]
+}

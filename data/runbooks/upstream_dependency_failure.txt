@@ -1,0 +1,24 @@
+Title: Upstream dependency failure propagated to gateway
+
+Symptoms:
+- 502 spike from upstream
+- Request timeout waiting for auth-service
+- Upstream 503 responses
+- Circuit breaker opens
+- Retry count increases
+
+Likely causes:
+- Upstream auth-service degradation
+- Timeouts under load
+- Circuit breaker activation due to repeated failures
+
+Checks:
+- Health of auth-service
+- Error rate and latency for upstream service
+- Retry pressure and breaker thresholds
+
+Recommended actions:
+- Investigate upstream service first
+- Reduce retry amplification
+- Check timeout configuration
+- Review circuit breaker thresholds

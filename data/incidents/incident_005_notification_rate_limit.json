@@ -1,0 +1,16 @@
+{
+  "id": "incident_005_notification_rate_limit",
+  "service": "notification-service",
+  "symptom": "notification delays and dropped sends",
+  "evidence": [
+    "Rate limit exceeded from email provider",
+    "Retry backoff triggered",
+    "Queue depth increased"
+  ],
+  "root_cause": "External provider throttling caused queue buildup and delivery delay",
+  "resolution": [
+    "Reduced send rate",
+    "Increased backoff interval",
+    "Prioritized critical notifications"
+  ]
+}

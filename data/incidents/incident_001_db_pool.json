@@ -1,0 +1,16 @@
+{
+  "id": "incident_001_payment_db_pool",
+  "service": "payment-service",
+  "symptom": "503 spike during payment processing",
+  "evidence": [
+    "DB connection pool timeout",
+    "Database connections near max",
+    "Retry attempts increasing"
+  ],
+  "root_cause": "Database connection pool exhaustion caused request failures under load",
+  "resolution": [
+    "Increased DB pool size temporarily",
+    "Identified slow queries",
+    "Reduced retry pressure"
+  ]
+}

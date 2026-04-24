@@ -1,0 +1,16 @@
+{
+  "id": "incident_004_order_downstream_payment",
+  "service": "order-service",
+  "symptom": "order placement latency spike",
+  "evidence": [
+    "Timed out waiting for payment authorization",
+    "Pending order queue depth increasing",
+    "Downstream payment-service latency increased"
+  ],
+  "root_cause": "Order-service latency driven by downstream payment-service slowdown",
+  "resolution": [
+    "Investigated payment-service bottleneck",
+    "Introduced degraded order confirmation path",
+    "Adjusted timeout and queue handling"
+  ]
+}

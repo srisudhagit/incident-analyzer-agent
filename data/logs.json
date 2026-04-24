@@ -1,0 +1,11 @@
+{
+  "payment-service": [
+    "ERROR DB connection pool timeout",
+    "ERROR Database connections near max",
+    "WARN Retry attempts increasing"
+  ],
+  "auth-service": [
+    "ERROR Token validation timeout",
+    "WARN Upstream dependency latency increased"
+  ]
+}

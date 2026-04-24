@@ -1,0 +1,23 @@
+Title: Downstream payment-service latency affecting order placement
+
+Symptoms:
+- Order placement latency spike
+- Timed out waiting for payment authorization
+- Pending order queue depth increasing
+- Downstream payment-service latency increased
+
+Likely causes:
+- Payment-service slowdown
+- Queue buildup from blocked downstream calls
+- Timeout values too aggressive
+
+Checks:
+- Payment-service latency and error rate
+- Queue depth trend
+- Timeout and retry settings between services
+
+Recommended actions:
+- Investigate payment-service health
+- Temporarily increase timeout if safe
+- Drain queue carefully
+- Add backpressure or degraded mode if needed

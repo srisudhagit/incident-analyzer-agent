@@ -1,0 +1,16 @@
+{
+  "id": "incident_002_auth_bad_config",
+  "service": "auth-service",
+  "symptom": "login failures after release",
+  "evidence": [
+    "Failed to parse auth config",
+    "401 responses increased",
+    "Deployment happened 12 minutes before incident"
+  ],
+  "root_cause": "Config regression introduced during recent deployment",
+  "resolution": [
+    "Rolled back release",
+    "Fixed missing issuer field",
+    "Added config validation before deploy"
+  ]
+}
