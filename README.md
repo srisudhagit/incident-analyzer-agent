@@ -247,7 +247,7 @@ production-style architecture with:
 ## Sample Run of the project
 
 ### Request-1
-
+```
 curl -X 'POST' \
   'http://127.0.0.1:8000/investigate' \
   -H 'accept: application/json' \
@@ -256,9 +256,9 @@ curl -X 'POST' \
   "service": "order-service",
   "symptom": "order placement latency spike"
 }'
-
+```
 ### Response-2
-
+```
 {
   "investigation_id": "082a3b02-24a3-4dd8-8079-5b49504c1c47",
   "service": "order-service",
@@ -335,9 +335,9 @@ curl -X 'POST' \
   },
   "latency_ms": 5993
 }
-
+```
 ### Request-1
-
+```
 curl -X 'POST' \
   'http://127.0.0.1:8000/investigate' \
   -H 'accept: application/json' \
@@ -346,9 +346,9 @@ curl -X 'POST' \
   "service": "inventory-service", 
   "symptom": "intermittent order failures"
 }'
-
+```
 ### Response-2
-
+```
 {
   "investigation_id": "66c8ff84-5d5c-4f9d-99ae-76549a28d5e3",
   "service": "inventory-service",
@@ -412,3 +412,4 @@ curl -X 'POST' \
   },
   "latency_ms": 4621
 }
+```
